@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.44.0+rev3
+## (2019-11-07)
+
+* Add wifi kernel configs in linux-mainline_%bbappend [Vicentiu Galanopulo]
+
 # v2.44.0+rev2
 ## (2019-10-31)
 
