@@ -34,6 +34,45 @@ IMAGE_CMD_resinos-img_append_orange-pi-one () {
     dd if=${DEPLOY_DIR_IMAGE}/u-boot-sunxi-with-spl.bin of=${RESIN_RAW_IMG} conv=notrunc seek=8 bs=1024
 }
 
+#
+# bananapi-M2+
+#
+
+IMAGE_FSTYPES_append_bananapi-m2-plus = " resinos-img"
+
+# Customize resinos-img
+RESIN_IMAGE_BOOTLOADER_bananapi-m2-plus = "u-boot"
+RESIN_BOOT_PARTITION_FILES_bananapi-m2-plus = " \
+    ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
+    sun8i-h3-bananapi-m2-plus.dtb:/dtb/sun8i-h3-bananapi-m2-plus.dtb \
+    boot.scr:/boot.scr \
+    u-boot-sunxi-with-spl.bin: \
+    "
+
+IMAGE_CMD_resinos-img_append_bananapi-m2-plus () {
+    # bananapi-m2-plus needs uboot written at a specific location
+    dd if=${DEPLOY_DIR_IMAGE}/u-boot-sunxi-with-spl.bin of=${RESIN_RAW_IMG} conv=notrunc seek=8 bs=1024
+}
+
+#
+# bananapi-M2 Zero
+#
+
+IMAGE_FSTYPES_append_bananapi-m2-zero = " resinos-img"
+
+# Customize resinos-img
+RESIN_IMAGE_BOOTLOADER_bananapi-m2-zero = "u-boot"
+RESIN_BOOT_PARTITION_FILES_bananapi-m2-zero = " \
+    ${KERNEL_IMAGETYPE}${KERNEL_INITRAMFS}-${MACHINE}.bin:/${KERNEL_IMAGETYPE} \
+    sun8i-h2-plus-bananapi-m2-zero.dtb:/dtb/sun8i-h2-plus-bananapi-m2-zero.dtb \
+    boot.scr:/boot.scr \
+    u-boot-sunxi-with-spl.bin: \
+    "
+
+IMAGE_CMD_resinos-img_append_bananapi-m2-zero () {
+    # bananapi-m2-zero needs uboot written at a specific location
+    dd if=${DEPLOY_DIR_IMAGE}/u-boot-sunxi-with-spl.bin of=${RESIN_RAW_IMG} conv=notrunc seek=8 bs=1024
+}
 
 #
 # bananapi-M1+
