@@ -12,7 +12,8 @@
 	url = https://github.com/balena-os/meta-balena.git
 [submodule "layers/meta-sunxi"]
 	path = layers/meta-sunxi
-	url = https://github.com/linux-sunxi/meta-sunxi.git
+	url = https://github.com/Dangku/meta-sunxi.git
+	branch = bananapi
 [submodule "layers/meta-rust"]
 	path = layers/meta-rust
 	url = https://github.com/meta-rust/meta-rust.git
