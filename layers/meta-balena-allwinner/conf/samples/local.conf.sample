@@ -3,6 +3,11 @@
 #MACHINE ?= "nanopi-neo-air"
 #MACHINE ?= "bananapi-m2-plus"
 #MACHINE ?= "bananapi-m2-zero"
+#MACHINE ?= "bananapi-m64"
+#MACHINE ?= "bananapi-m3"
+#MACHINE ?= "bananapi-m2-ultra"
+#MACHINE ?= "bananapi-m2-berry"
+#MACHINE ?= "bananapi-m2-magic"
 
 # More info meta-resin/README.md
 #TARGET_REPOSITORY ?= ""
